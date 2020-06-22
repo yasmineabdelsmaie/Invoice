@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://my1sstorageaccount.blob.core.windows.net/images/bill.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Invoice Mangagement System</title>
+    <style>
+        .InputStyle {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 1%;
+        }
+
+        .Margin-top-1 {
+            margin-top: 1%;
+        }
+
+        .Margin-top-2 {
+            margin-top: 2%;
+        }
+
+        .Text-align-right {
+            text-align: right;
+        }
+
+        .ContainerStyle {
+            padding: 5%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 2%;
+
+        }
+
+        .TableStyle {
+            box-shadow: 10px 10px 8px #f2f2f2"
+
+        }
+
+        .Margin-bottom-1 {
+            margin-bottom: 1%;
+        }
+
+        .Text-align-center {
+            text-align: center;
+        }
+
+        .FooterAndNaveStyle {
+            background-color: #008080;
+        }
+
+        td {
+            min-width: 130px;
+        }
+
+        .BtnSize {
+            width: 12%;
+            height: 100%;
+        }
+
+        .AddBtn {
+            padding: 10px 20px;
+            background-color: #008080;
+            color: white;
+            border: 2px solid #008080;
+            border-radius: 5%;
+            font-size: 16px;
+        }
+
+        .AddBtn:hover {
+            background-color: #006666;
+            color: white;
+
+        }
+
+        .LinkStyle:link {
+            color: white;
+        }
+
+        .PlusIconStyle {
+            color: white;
+            width: 20px;
+            height: 20px;
+        }
+
+        .DropdownStyle:link {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm FooterAndNaveStyle">
+
+        <a class="navbar-brand LinkStyle" href="#">Dynamic Link</a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link LinkStyle" href="#">Add New Invoice</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link LinkStyle" href="#">Show All Invoices</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle LinkStyle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Stores
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item DropdownStyle" href="#">Store 1</a>
+                    <a class="dropdown-item DropdownStyle" href="#">Store 2</a>
+                    <a class="dropdown-item DropdownStyle" href="#">Store 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container ContainerStyle">
+
+        <div class="row">
+            <div class="Text-align-right col-sm-6">
+
+                <label>Invoice No</label> <input placeholder="Invoice number" class="InputStyle col-sm-4" type="text">
+                <div class="Margin-top-2">
+                    <label>Store</label>
+
+                    <select class="InputStyle col-sm-4">
+                        <option>Store</option>
+                        <option>Store</option>
+                        <option>Store</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-6">
+
+                <label>Invoice Date</label> <input class="InputStyle col-sm-4" type="date">
+
+            </div>
+        </div>
+        <div class="row Margin-top-2">
+            <div class="col-sm-12">
+                <table class="table table-responsive table-bordered table-hover TableStyle">
+                    <thead class=" text-light FooterAndNaveStyle">
+                        <th>Item</th>
+                        <th>Unit</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                        <th>Discount</th>
+                        <th>Net</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>Unit</td>
+                            <td>20000</td>
+                            <td>1</td>
+                            <td>20000</td>
+                            <td>0</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>Tablet</td>
+                            <td>Unit</td>
+                            <td>5000</td>
+                            <td>1</td>
+                            <td>5000</td>
+                            <td>200</td>
+                            <td>4800</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class="form-control">
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control">
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                </select>
+                            </td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col Text-align-right">
+                <button class="AddBtn" type="button" class=" Margin-bottom-1 ">
+                    <div>
+                        <i class="fa fa-plus PlusIconStyle"></i> Add
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col Text-align-right">
+                <div class="Margin-top-1">
+                    <label>Total</label> <input placeholder="Total price" class="InputStyle" type="text">
+                </div>
+                <div class="Margin-top-1">
+                    <label>Taxes</label> <input placeholder="Total taxes" class="InputStyle" type="text">
+                </div>
+                <div class="Margin-top-1">
+                    <label>Net</label> <input placeholder="Net price" class="InputStyle" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col Text-align-center">
+                <button class="btn text-light btn-success BtnSize">
+                    <i class="fa fa-save"></i> Save
+                </button>
+                <button class="btn text-light btn-danger BtnSize">
+                    <i class="fa fa-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small text-light Margin-top-2 FooterAndNaveStyle">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a class="LinkStyle" href="#"> Yasmine </a>
+    </footer>
+
+</body>
+
+</html>
